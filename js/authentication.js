@@ -17,3 +17,7 @@ function validatePassword() {
 function signIn() {
 
 }
+
+function signUp() {
+
+}

@@ -18,19 +18,24 @@
     <section class="p-[3%]">
         <p class="text-6xl text-gray-900">Welcome to Bloggink!</p>
         <p class="pt-1.5 text-2xl">Thank you for choosing our platform &#128516;</p>
-        <p class="pt-1.5 text-2xl"> Sign in to continue. If you don't have an account, please <a class="text-purple-600 underline hover:text-amber-400 active:text-red-500" href="sign-up.html">create one</a>.</p>
+        <p class="pt-1.5 text-2xl">Create an account and enjoy blogging...</p>
+        <p class="pt-1.5 text-2xl">Here are a few rules relating to choosing username and password:</p>
+        <ul class="text-xl list-inside list-disc">
+            <li>Username must only contain alphanumeric characters</li>
+            <li>In addition to alphanumeric characters, password must have at least one special character</li>
+        </ul>
     </section>
     <div class="m-[5%] p-[5%] md:pt-2 md:mt-1 md:pl-[15%] md:pr-[15%] lg:pl-50 lg:pr-50 xl:pl-96 xl:pr-96 text-2xl">
         <form>
             <fieldset class="shadow-xl shadow-gray-400 border-2 rounded-xl pl-[10%] pr-[10%] p-[5%]">
-                <legend class="text-center">Sign in</legend>
+                <legend class="text-center">Sign up</legend>
                 <label>Username</label><br>
                 <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="text" id="username"><br>
                 <label>Password</label><br>
                 <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="password" id="password"><br>
                 <input class="" type="checkbox" onclick="togglePasswordVisibility()">Show password<br>
                 <div class="flex flex-row justify-center">
-                    <button class="bg-blue-500 hover:bg-amber-400 active:bg-red-400 p-2 text-white rounded-2xl" onclick="signIn()">Sign in</button>
+                    <button class="bg-blue-500 hover:bg-amber-400 active:bg-red-400 p-2 text-white rounded-2xl" onclick="signUp()">Sign up</button>
                 </div>
             </fieldset>
         </form>
