@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bloggink</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
+    <link rel=" stylesheet " href="./css/output.css ">
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
+</head>
+
+<body class="min-h-screen min-w-screen font-mono">
+    <header class="h-23 bg-gradient-to-br from-cyan-300 to-blue-600 flex flex-row items-center justify-center">
+        <h1 class="text-white text-5xl p-2 inline-block font-serif animate-pulse">Bloggink</h1>
+    </header>
+
+    <!--Welcome Banner-->
+    <section class="p-[3%]">
+        <p class="text-6xl text-gray-900">Welcome to Bloggink!</p>
+        <p class="pt-1.5 text-2xl">Thank you for choosing our platform &#128516;</p>
+        <p class="pt-1.5 text-2xl"> Sign in to continue. If you don't have an account, please create one.</p>
+    </section>
+    <div class="m-[5%] p-[5%] md:pt-2 md:mt-1 md:pl-[15%] md:pr-[15%] lg:pl-50 lg:pr-50 xl:pl-96 xl:pr-96 text-2xl">
+        <form>
+            <fieldset class="border-2 rounded-xl pl-[10%] pr-[10%] p-[5%]">
+                <legend class="text-center">Sign in</legend>
+                <label>Username</label><br>
+                <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="text" id="username"><br>
+                <label>Password</label><br>
+                <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="password" id="password"><br>
+                <input class="" type="checkbox" onclick="togglePasswordVisibility()">Show Password<br>
+                <div class="flex flex-row justify-center">
+                    <button class="bg-blue-500 hover:bg-amber-400 active:bg-red-400 p-2 text-white rounded-2xl" onclick="signIn()">Sign in</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
