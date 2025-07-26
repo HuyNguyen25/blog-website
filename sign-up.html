@@ -21,30 +21,32 @@
         <p class="pt-1.5 text-2xl">Create an account and enjoy blogging...</p>
         <p class="pt-1.5 text-2xl">Here are a few rules relating to choosing username and password:</p>
         <ul class="text-xl list-inside list-disc">
-            <li>Username must only contain alphanumeric characters</li>
-            <li>In addition to alphanumeric characters, password must have at least one special character</li>
+            <li>Username can only contain alphanumeric characters and cannot contain any space</li>
+            <li>Password must contain at least 8 characters without any space</li>
+            <li>It's recommended to add a few special characters among these !@#$%^&*? to make your password stronger</li>
         </ul>
     </section>
     <div class="m-[5%] p-[5%] md:pt-2 md:mt-1 md:pl-[15%] md:pr-[15%] lg:pl-50 lg:pr-50 xl:pl-96 xl:pr-96 text-2xl">
-        <form>
+        <div>
             <fieldset class="shadow-xl shadow-gray-400 border-2 rounded-xl pl-[10%] pr-[10%] p-[5%]">
                 <legend class="text-center">Sign up</legend>
                 <label>Username</label><br>
-                <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="text" id="username"><br>
+                <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="text" id="username" pattern="[A-Za-z0-9]*"><br>
                 <label>Password</label><br>
-                <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="password" id="password"><br>
+                <input class="w-2/3 md:w-80 border-1 border-gray-600 rounded-xl" type="password" id="password" pattern="[A-Za-z0-9!@#$%^&*?]{8,}"><br>
                 <input class="" type="checkbox" onclick="togglePasswordVisibility()">Show password<br>
                 <div class="flex flex-row justify-center">
-                    <button class="bg-blue-500 hover:bg-amber-400 active:bg-red-400 p-2 text-white rounded-2xl" onclick="signUp()">Sign up</button>
+                    <button class="border-1 border-gray-600 bg-blue-500 hover:bg-amber-400 active:bg-red-400 p-2 text-white rounded-2xl" onclick="signUp()">Sign up</button>
                 </div>
             </fieldset>
-        </form>
+        </div>
     </div>
     <footer class="flex flex-col justify-center items-center ">
         <p>&copy; Created By Phuc Huy Nguyen</p>
         <p>For Educational Purposes Only</p>
     </footer>
-    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pocketbase/0.8.0-rc1/pocketbase.umd.js"></script>
+    <script src="./js/pocketbase-init.js"></script>
     <script src="./js/authentication.js"></script>
 </body>
 
