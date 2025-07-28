@@ -9,8 +9,65 @@
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
 </head>
 
-<body>
+<body class="min-h-screen font-mono " onload="initTimeline()">
+    <header class="h-23 bg-gradient-to-br from-cyan-300 to-blue-600 flex flex-row items-center justify-between sticky top-0">
+        <img class="ml-12 h-12 w-20 md:h-15 md:w-25 object-contain animate-wiggle" src="./assets/icons/blogging.png ">
+        <h1 class="text-white text-5xl p-2 inline-block font-serif animate-pulse">Bloggink</h1>
+        <nav class="flex flex-row pr-12 ">
+            <a class="p-3 hover:text-amber-200 active:text-amber-50 text-xl md:text-2xl" href="news-feed.html">
+                <div class="flex flex-col items-center justify-center">
+                    <i class="fa fa-newspaper-o"></i>
+                    <p>News Feed</p>
+                </div>
+            </a>
+            <a class="p-3 hover:text-amber-200 active:text-amber-50 text-xl md:text-2xl" href="profile.html">
+                <div class="flex flex-col items-center justify-center">
+                    <i class="fa fa-user "></i>
+                    <p id="current-username">Lorem Ipsum</p>
+                </div>
+            </a>
+        </nav>
+    </header>
 
+    <!-- This div contains the timeline of the current user-->
+    <div class="min-h-screen flex flex-col gap-y-12 items-center pt-3 pb-3 bg-gray-100">
+
+
+    </div>
+
+    <!--Popped up when the user wants to create a new post-->
+    <div id="new-post" class="shadow-lg shadow-gray-600 flex flex-col invisible fixed inset-0 m-auto rounded-xl overflow-y-auto z-50 h-3/4 md:h-1/2 lg:h-3/5 w-4/5 md:w-2/3 lg:w-1/2 bg-white">
+        <button class="absolute right-0 top-0 rounded-xl py-2 px-4 hover:bg-gray-200 active:bg-gray-300" onclick="toggleNewPostField()">
+            <i class="fa fa-close"></i>
+        </button>
+        <br>
+        <p class="ml-6 text-2xl font-bold">Title</p>
+        <div id="title" class="p-2 text-xl mx-3 rounded-md border-1 border-gray-300" contenteditable="true">
+
+        </div>
+        <p class="ml-6 text-2xl font-bold">Content</p>
+        <div id="content" class="p-2 h-full text-xl mx-3 rounded-md border-1 border-gray-300" contenteditable="true">
+
+        </div>
+        <div class="flex flex-row justify-end items-center">
+            <button class="m-3 shadow-md shadow-gray-600 rounded-2xl p-3 text-2xl hover:bg-gray-200 active:bg-gray-300" onclick="createNewPost()">
+                Post
+            </button>
+        </div>
+    </div>
+    <!--Button that needs to be clicked so as to create a new post-->
+    <button class="text-2xl fixed right-8 bottom-6 md:bottom-8 lg:bottom-12 p-3 px-5 shadow-lg shadow-gray-600 bg-gray-100 hover:bg-gray-200 rounded-2xl active:bg-gray-300" onclick="toggleNewPostField()">
+        <i class="fa fa-pencil"></i>
+    </button>
+
+
+    <footer class="font-mono h-20 bg-gradient-to-br from-gray-800 to-gray-300 flex flex-col justify-center items-center ">
+        <p>&copy; Created By Phuc Huy Nguyen</p>
+        <p>For Educational Purposes Only</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pocketbase/0.8.0-rc1/pocketbase.umd.js"></script>
+    <script src="./js/pocketbase-init.js"></script>
+    <script src="./js/timeline.js"></script>
 </body>
 
 </html>
