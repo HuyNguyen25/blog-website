@@ -9,7 +9,7 @@
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
 </head>
 
-<body class="min-h-screen font-mono" onload="initNewsFeed()">
+<body class="min-h-screen font-mono" onload="initNewsFeed(); fetchAndShowNewPosts();">
     <header class="h-23 bg-gradient-to-br from-cyan-300 to-blue-600 flex flex-row items-center justify-between sticky top-0">
         <img class="ml-12 h-12 w-20 md:h-15 md:w-25 object-contain animate-wiggle" src="./assets/icons/blogging.png ">
         <h1 class="text-white text-5xl p-2 inline-block font-serif animate-pulse">Bloggink</h1>
@@ -30,128 +30,15 @@
     </header>
 
     <!-- This div contains the new feed for the current user-->
-    <div class="min-h-screen flex flex-col gap-y-12 items-center pt-3 pb-3 bg-gray-100">
-        <article class="flex flex-col bg-white gap-y-2 w-4/5 md:w-3/5 lg:w-3xl justify-center rounded-xl shadow-xl shadow-gray-500 p-2">
-            <div class="flex flex-row gap-x-5 items-center text-2xl">
-                <i class="fa fa-user-circle-o"></i>
-                <p>MikeTran2004</p>
-            </div>
-            <hr>
-            <div class="flex flex-row items-center justify-center text-3xl flex-wrap font-bold">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            </div>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            </p>
-            <hr>
-            <div class="flex flex-row justify-between">
-                <button class="p-2 hover:bg-gray-200 rounded-md active:bg-gray-300">
-                    <i class="fa fa-heart-o"></i>
-                    Like
-                </button>
-                <p>July 26th, 2025</p>
-            </div>
-        </article>
-        <article class="flex flex-col bg-white gap-y-2 w-4/5 md:w-3/5 lg:w-3xl justify-center rounded-xl shadow-xl shadow-gray-500 p-2">
-            <div class="flex flex-row gap-x-5 items-center text-2xl">
-                <i class="fa fa-user-circle-o"></i>
-                <p>MikeTran2004</p>
-            </div>
-            <hr>
-            <div class="flex flex-row items-center justify-center text-3xl flex-wrap font-bold">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            </div>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            </p>
-            <hr>
-            <div class="flex flex-row justify-between">
-                <button class="p-2 hover:bg-gray-200 rounded-md active:bg-gray-300">
-                    <i class="fa fa-heart-o"></i>
-                    Like
-                </button>
-                <p>July 26th, 2025</p>
-            </div>
-        </article>
-        <article class="flex flex-col bg-white gap-y-2 w-4/5 md:w-3/5 lg:w-3xl justify-center rounded-xl shadow-xl shadow-gray-500 p-2">
-            <div class="flex flex-row gap-x-5 items-center text-2xl">
-                <i class="fa fa-user-circle-o"></i>
-                <p>MikeTran2004</p>
-            </div>
-            <hr>
-            <div class="flex flex-row items-center justify-center text-3xl flex-wrap font-bold">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            </div>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            </p>
-            <hr>
-            <div class="flex flex-row justify-between">
-                <button class="p-2 hover:bg-gray-200 rounded-md active:bg-gray-300">
-                    <i class="fa fa-heart-o"></i>
-                    Like
-                </button>
-                <p>July 26th, 2025</p>
-            </div>
-        </article>
-        <article class="flex flex-col bg-white gap-y-2 w-4/5 md:w-3/5 lg:w-3xl justify-center rounded-xl shadow-xl shadow-gray-500 p-2">
-            <div class="flex flex-row gap-x-5 items-center text-2xl">
-                <i class="fa fa-user-circle-o"></i>
-                <p>MikeTran2004</p>
-            </div>
-            <hr>
-            <div class="flex flex-row items-center justify-center text-3xl flex-wrap font-bold">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            </div>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            </p>
-            <hr>
-            <div class="flex flex-row justify-between">
-                <button class="p-2 hover:bg-gray-200 rounded-md active:bg-gray-300">
-                    <i class="fa fa-heart-o"></i>
-                    Like
-                </button>
-                <p>July 26th, 2025</p>
-            </div>
-        </article>
-        <article class="flex flex-col bg-white gap-y-2 w-4/5 md:w-3/5 lg:w-3xl justify-center rounded-xl shadow-xl shadow-gray-500 p-2">
-            <div class="flex flex-row gap-x-5 items-center text-2xl">
-                <i class="fa fa-user-circle-o"></i>
-                <p>MikeTran2004</p>
-            </div>
-            <hr>
-            <div class="flex flex-row items-center justify-center text-3xl flex-wrap font-bold">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
-            </div>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-                egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-            </p>
-            <hr>
-            <div class="flex flex-row justify-between">
-                <button class="p-2 hover:bg-gray-200 rounded-md active:bg-gray-300">
-                    <i class="fa fa-heart-o"></i>
-                    Like
-                </button>
-                <p>July 26th, 2025</p>
-            </div>
-        </article>
+    <div id="news-feed" class="min-h-screen flex flex-col gap-y-12 items-center pt-3 pb-3 bg-gray-100">
+
     </div>
 
     <footer class="font-mono h-20 bg-gradient-to-br from-gray-800 to-gray-300 flex flex-col justify-center items-center ">
         <p>&copy; Created By Phuc Huy Nguyen</p>
         <p>For Educational Purposes Only</p>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pocketbase/0.8.0-rc1/pocketbase.umd.js"></script>
     <script src="./js/pocketbase-init.js"></script>
     <script src="./js/news-feed.js"></script>

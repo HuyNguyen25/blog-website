@@ -9,7 +9,7 @@
     <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css ">
 </head>
 
-<body class="min-h-screen font-mono " onload="initTimeline()">
+<body class="min-h-screen font-mono " onload="initTimeline(); fetchAndShowNewPosts(); ">
     <header class="h-23 bg-gradient-to-br from-cyan-300 to-blue-600 flex flex-row items-center justify-between sticky top-0">
         <img class="ml-12 h-12 w-20 md:h-15 md:w-25 object-contain animate-wiggle" src="./assets/icons/blogging.png ">
         <h1 class="text-white text-5xl p-2 inline-block font-serif animate-pulse">Bloggink</h1>
@@ -30,7 +30,7 @@
     </header>
 
     <!-- This div contains the timeline of the current user-->
-    <div class="min-h-screen flex flex-col gap-y-12 items-center pt-3 pb-3 bg-gray-100">
+    <div id="timeline" class="min-h-screen flex flex-col gap-y-12 items-center pt-3 pb-3 bg-gray-100">
 
 
     </div>
@@ -43,12 +43,13 @@
         <br>
         <p class="ml-6 text-2xl font-bold">Title</p>
         <div id="title" class="p-2 text-xl mx-3 rounded-md border-1 border-gray-300" contenteditable="true">
-
+            <p></p>
         </div>
         <p class="ml-6 text-2xl font-bold">Content</p>
-        <div id="content" class="p-2 h-full text-xl mx-3 rounded-md border-1 border-gray-300" contenteditable="true">
-
+        <div id="content" class="p-2 text-xl mx-3 rounded-md border-1 border-gray-300" contenteditable="true">
+            <p></p>
         </div>
+
         <div class="flex flex-row justify-end items-center">
             <button class="m-3 shadow-md shadow-gray-600 rounded-2xl p-3 text-2xl hover:bg-gray-200 active:bg-gray-300" onclick="createNewPost()">
                 Post
