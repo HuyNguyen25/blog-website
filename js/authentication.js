@@ -6,6 +6,16 @@ function togglePasswordVisibility() {
         passwordField.type = "password";
 }
 
+function navigateToNewsFeed() {
+    document.getElementById("notification").classList.toggle("invisible");
+    window.location.replace('news-feed.html');
+}
+
+function navigateToIndex() {
+    document.getElementById("notification").classList.toggle("invisible");
+    window.location.replace('index.html');
+}
+
 async function signIn() {
     const username = document.getElementById("username");
     const password = document.getElementById("password");
@@ -13,8 +23,7 @@ async function signIn() {
     try {
         if (username.checkValidity() && password.checkValidity()) {
             const authData = await pb.collection("users").authWithPassword(username.value, password.value);
-            alert("Signed in successfully!");
-            window.location.replace('news-feed.html');
+            document.getElementById("notification").classList.toggle("invisible");
         } else {
             alert("Review your username or password!");
         }
@@ -38,14 +47,16 @@ async function signUp() {
                 password: password.value,
                 passwordConfirm: password.value
             });
-            alert("Your account has been created successfully!");
-            window.location.replace('index.html');
+            document.getElementById("notification").classList.toggle("invisible");
         } else {
             alert("Review your username or password!");
             username.value = "";
             password.value = "";
         }
     } catch (error) {
+        alert("Review your username or password!");
+        username.value = "";
+        password.value = "";
         console.error("Error: ", error);
     }
 }
