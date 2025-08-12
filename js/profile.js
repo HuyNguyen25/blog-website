@@ -26,3 +26,18 @@ async function changePassword() {
         alert("Unable to change password. Try again!");
     }
 }
+
+function signOut() {
+    pb.authStore.clear();
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.replace('index.html');
+}
+
+function showSignOutNotification() {
+    document.getElementById("notification").classList.toggle("invisible");
+}
+
+function hideSignOutNotification() {
+    document.getElementById("notification").classList.toggle("invisible");
+}
