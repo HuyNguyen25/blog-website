@@ -291,9 +291,6 @@
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
-  .h-150 {
-    height: calc(var(--spacing) * 150);
-  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -487,12 +484,6 @@
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
-  .pt-\[3\%\] {
-    padding-top: 3%;
-  }
-  .pt-\[5\%\] {
-    padding-top: 5%;
-  }
   .pt-\[10\%\] {
     padding-top: 10%;
   }
@@ -504,9 +495,6 @@
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
-  }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
   }
   .pl-\[10\%\] {
     padding-left: 10%;
@@ -546,6 +534,9 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .whitespace-pre-wrap {
+    white-space: pre-wrap;
   }
   .text-gray-500 {
     color: var(--color-gray-500);

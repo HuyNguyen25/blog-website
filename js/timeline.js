@@ -30,8 +30,8 @@ async function deleteLikes(postId) {
 }
 
 async function createNewPost() {
-    const title = document.getElementById("title").textContent;
-    const content = document.getElementById("content").textContent;
+    const title = document.getElementById("title").innerHTML;
+    const content = document.getElementById("content").innerHTML;
     const author = pb.authStore.model.id;
     try {
         if (title !== "" && content !== "") {
