@@ -14,6 +14,9 @@ async function deleteLikes(postId) {
     let page = 1;
 
     try {
+        const post = await pb.collection('posts').getOne(postId);
+        if (post.likes === 0)
+            return;
         while (true) {
             let resultList = await pb.collection("likes").getList(page, perPage, {
                 filter: `post="${postId}"`
@@ -114,6 +117,7 @@ async function showPosts(posts) {
             titleDiv.contentEditable = "true";
             titleDiv.focus();
             contentDiv.contentEditable = "true";
+            editButton.classList.toggle("hidden");
             repostButton.classList.toggle("hidden");
         });
         deleteButton.addEventListener("click", async function() {
@@ -126,6 +130,7 @@ async function showPosts(posts) {
         repostButton.addEventListener("click", async function() {
             titleDiv.contentEditable = "false";
             contentDiv.contentEditable = "false";
+            editButton.classList.toggle("hidden");
             repostButton.classList.toggle("hidden");
             try {
                 const data = {
